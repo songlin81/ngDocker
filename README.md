@@ -52,7 +52,7 @@
   songlin81/angular12   latest    313e7843926b   32 hours ago   56.4MB
 
 # 6. ngrok
-## linsong@linsongdeMacBook-Air Downloads % ./ngrok http 8080
+## linsong@linsongdeMacBook-Air Downloads % ./ngrok http 80
 
 # 7. Package Node
 ## linsong@linsongdeMacBook-Air NGNode % touch Dockerfile
