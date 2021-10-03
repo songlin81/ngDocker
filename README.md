@@ -20,42 +20,42 @@
 - linsong@linsongdeMacBook-Air dist % docker stop dd5709a8edb29
     * dd5709a8edb29
 - linsong@linsongdeMacBook-Air dist % docker ps -a 
-  CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS                      PORTS     NAMES
-  dd5709a8edb2   angular12   "nginx -g 'daemon of…"   2 minutes ago   Exited (0) 35 seconds ago             demo1
+    * CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS                      PORTS     NAMES
+    * dd5709a8edb2   angular12   "nginx -g 'daemon of…"   2 minutes ago   Exited (0) 35 seconds ago             demo1
 - linsong@linsongdeMacBook-Air dist % docker rm dd5709a8edb2  
-  dd5709a8edb2
+    * dd5709a8edb2
 - linsong@linsongdeMacBook-Air dist % docker rmi d4de5df03fdc
-  Untagged: angular12:latest
-  Deleted: sha256:d4de5df03fdce6494820c02a38a467188ab226e932485e09efd614de1a0eb0ce
+    * Untagged: angular12:latest
+    * Deleted: sha256:d4de5df03fdce6494820c02a38a467188ab226e932485e09efd614de1a0eb0ce
 
-# 4. Docker Hub push
-## linsong@linsongdeMacBook-Air dist % docker tag angular12 songlin81/angular12
-## linsong@linsongdeMacBook-Air dist % docker push songlin81/angular12:latest  
-  The push refers to repository [docker.io/songlin81/angular12]
-  c84e4680b7d2: Pushed 
-  e6983b701b8b: Pushed 
-  90e9f0ac3473: Pushed 
-  9f654519d2ae: Pushed 
-  9f8566ee5135: Pushed 
-  latest: digest: sha256:1460038c33bdcd83b203a1ae4372805ea46627e1c66d4ed6c1b2a588a83bc23e size: 1365
+### 4. Docker Hub push
+- linsong@linsongdeMacBook-Air dist % docker tag angular12 songlin81/angular12
+- linsong@linsongdeMacBook-Air dist % docker push songlin81/angular12:latest  
+    * The push refers to repository [docker.io/songlin81/angular12]
+    * c84e4680b7d2: Pushed 
+    * e6983b701b8b: Pushed 
+    * 90e9f0ac3473: Pushed 
+    * 9f654519d2ae: Pushed 
+    * 9f8566ee5135: Pushed 
+    * latest: digest: sha256:1460038c33bdcd83b203a1ae4372805ea46627e1c66d4ed6c1b2a588a83bc23e size: 1365
 
-# 5. Docker Hub pull
-## linsong@linsongdeMacBook-Air dist % docker pull songlin81/angular12:latest
-  latest: Pulling from songlin81/angular12
-  53478ce18e19: Already exists 
-  cc9de921c04c: Already exists 
-  af07f219f9a3: Already exists 
-  faf44457d6e5: Already exists 
-  9f2815c0b380: Already exists 
-  Digest: sha256:1460038c33bdcd83b203a1ae4372805ea46627e1c66d4ed6c1b2a588a83bc23e
-  Status: Downloaded newer image for songlin81/angular12:latest
-  docker.io/songlin81/angular12:latest
+### 5. Docker Hub pull
+- linsong@linsongdeMacBook-Air dist % docker pull songlin81/angular12:latest
+    * latest: Pulling from songlin81/angular12
+    * 53478ce18e19: Already exists 
+    * cc9de921c04c: Already exists 
+    * af07f219f9a3: Already exists 
+    * faf44457d6e5: Already exists 
+    * 9f2815c0b380: Already exists 
+    * Digest: sha256:1460038c33bdcd83b203a1ae4372805ea46627e1c66d4ed6c1b2a588a83bc23e
+    * Status: Downloaded newer image for songlin81/angular12:latest
+    * docker.io/songlin81/angular12:latest
 ## linsong@linsongdeMacBook-Air dist % docker images                         
-  REPOSITORY            TAG       IMAGE ID       CREATED        SIZE
-  songlin81/angular12   latest    313e7843926b   32 hours ago   56.4MB
+    * REPOSITORY            TAG       IMAGE ID       CREATED        SIZE
+    * songlin81/angular12   latest    313e7843926b   32 hours ago   56.4MB
 
-# 6. ngrok
-## linsong@linsongdeMacBook-Air Downloads % ./ngrok http 80
+### 6. ngrok
+- linsong@linsongdeMacBook-Air Downloads % ./ngrok http 8080
 
 # 7. Package Node
 ## linsong@linsongdeMacBook-Air NGNode % touch Dockerfile
