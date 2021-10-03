@@ -3,7 +3,7 @@
 
 ### 1. Build image
 - linsong@linsongdeMacBook-Air NGStore % ng build --prod
-    Create DockerFile in NGStore/Dockerfile
+    * Create DockerFile in NGStore/Dockerfile
 - linsong@linsongdeMacBook-Air NGStore % mv Dockerfile ./dist
 - linsong@linsongdeMacBook-Air NGStore % cd dist 
 - linsong@linsongdeMacBook-Air dist % docker build -t angular12 .
