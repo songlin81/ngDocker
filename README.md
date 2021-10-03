@@ -1,5 +1,5 @@
-# Angular Web application and NodeJS data service with Docker Compose
-### .
+# Angular Web application and NodeJS data service
+### Containerization with Docker Compose
 
 ### 1. Build image
 - linsong@linsongdeMacBook-Air NGStore % ng build --prod
@@ -13,12 +13,12 @@
 
 ### 2. Run container 
 - linsong@linsongdeMacBook-Air dist % docker run -d --name demo1 -p 8080:80 angular12
- * dd5709a8edb299a45557931bd2bef333aa24a3ec0339ce3131159291b0974c56
+    * dd5709a8edb299a45557931bd2bef333aa24a3ec0339ce3131159291b0974c56
 - Visit: 127.0.0.1:8080
 
 ### 3. Clean up
 - linsong@linsongdeMacBook-Air dist % docker stop dd5709a8edb29
-  dd5709a8edb29
+    * dd5709a8edb29
 - linsong@linsongdeMacBook-Air dist % docker ps -a 
   CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS                      PORTS     NAMES
   dd5709a8edb2   angular12   "nginx -g 'daemon of…"   2 minutes ago   Exited (0) 35 seconds ago             demo1
