@@ -79,22 +79,24 @@
 - linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume create fruit-node 
     * fruit-node
 - linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
-    ```[
-        {
-            "CreatedAt": "2021-10-01T12:23:54Z",
-            "Driver": "local",
-            "Labels": {},
-            "Mountpoint": "c",
-            "Name": "fruit-node",
-            "Options": {},
-            "Scope": "local"
-        }
-    ]```
-## linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume rm fruit-node 
-  fruit-node
-## linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
-  []
-  Error: No such object: fruit-node
+    (```)
+      [
+          {
+              "CreatedAt": "2021-10-01T12:23:54Z",
+              "Driver": "local",
+              "Labels": {},
+              "Mountpoint": "c",
+              "Name": "fruit-node",
+              "Options": {},
+              "Scope": "local"
+          }
+      ]
+    (```)
+- linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume rm fruit-node 
+    * fruit-node
+- linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
+    * []
+    * Error: No such object: fruit-node
 ## linsong@linsongdeMacBook-Air NGNode % docker build . -t songlin81/node-fruit-app
 ## insong@linsongdeMacBook-Air NGNode % docker images
   REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
@@ -104,7 +106,7 @@
   4053ed9e15aa229da7bc5d74e15e1e52b54b915248aed455edf43ec860d21457
 ## 
 
-# 9. Docker Compose
+### 9. Docker Compose
 ## linsong@linsongdeMacBook-Air NGNode % docker-compose -v
   docker-compose version 1.29.2, build 5becea4c
 ## linsong@linsongdeMacBook-Air ngrx_pocs-main % cd Compose && touch docker-compose.yml
