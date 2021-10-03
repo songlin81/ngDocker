@@ -1,0 +1,13 @@
+{
+  "name": "docker_fruit_app",
+  "version": "1.0.0",
+  "description": "fruit.js on Docker",
+  "author": "Song Lin <songlin81@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
