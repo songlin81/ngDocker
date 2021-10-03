@@ -100,20 +100,21 @@
 - linsong@linsongdeMacBook-Air NGNode % docker build . -t songlin81/node-fruit-app
 - insong@linsongdeMacBook-Air NGNode % docker images
     * REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
-  songlin81/node-fruit-app   latest    77583c891812   12 seconds ago   912MB
-  songlin81/angular12        latest    313e7843926b   3 days ago       56.4MB
-## linsong@linsongdeMacBook-Air NGNode % docker run --name fruit-node -p 4000:4000 -d -v /Users/linsong/Downloads/ngDocker/voldata/:/fruitdata songlin81/node-fruit-app
-  4053ed9e15aa229da7bc5d74e15e1e52b54b915248aed455edf43ec860d21457
-## 
+    * songlin81/node-fruit-app   latest    77583c891812   12 seconds ago   912MB
+    * songlin81/angular12        latest    313e7843926b   3 days ago       56.4MB
+- linsong@linsongdeMacBook-Air NGNode % docker run --name fruit-node -p 4000:4000 -d -v /Users/linsong/Downloads/ngDocker/voldata/:/fruitdata songlin81/node-fruit-app
+    * 4053ed9e15aa229da7bc5d74e15e1e52b54b915248aed455edf43ec860d21457
 
 ### 9. Docker Compose
-## linsong@linsongdeMacBook-Air NGNode % docker-compose -v
-  docker-compose version 1.29.2, build 5becea4c
-## linsong@linsongdeMacBook-Air ngrx_pocs-main % cd Compose && touch docker-compose.yml
-## linsong@linsongdeMacBook-Air Compose % docker-compose up
-## linsong@linsongdeMacBook-Air Compose % docker-compose stop
-## linsong@linsongdeMacBook-Air Compose % docker-compose ps
-        Name                     Command               State                     Ports                  
-  -------------------------------------------------------------------------------------------------------
-  compose_datanode_1   docker-entrypoint.sh node  ...   Up      0.0.0.0:4000->4000/tcp,:::4000->4000/tcp 
-  compose_web_1        nginx -g daemon off;             Up      443/tcp, 0.0.0.0:80->80/tcp,:::80->80/tcp
+- linsong@linsongdeMacBook-Air NGNode % docker-compose -v
+    * docker-compose version 1.29.2, build 5becea4c
+- linsong@linsongdeMacBook-Air ngrx_pocs-main % cd Compose && touch docker-compose.yml
+- linsong@linsongdeMacBook-Air Compose % docker-compose up
+- linsong@linsongdeMacBook-Air Compose % docker-compose stop
+- linsong@linsongdeMacBook-Air Compose % docker-compose ps
+    ```
+            Name                     Command               State                     Ports                  
+    -------------------------------------------------------------------------------------------------------
+    compose_datanode_1   docker-entrypoint.sh node  ...   Up      0.0.0.0:4000->4000/tcp,:::4000->4000/tcp 
+    compose_web_1        nginx -g daemon off;             Up      443/tcp, 0.0.0.0:80->80/tcp,:::80->80/tcp
+    ```
