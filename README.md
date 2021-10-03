@@ -79,7 +79,7 @@
 - linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume create fruit-node 
     * fruit-node
 - linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
-    (```)
+    ```
       [
           {
               "CreatedAt": "2021-10-01T12:23:54Z",
@@ -91,15 +91,15 @@
               "Scope": "local"
           }
       ]
-    (```)
+    ```
 - linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume rm fruit-node 
     * fruit-node
 - linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
     * []
     * Error: No such object: fruit-node
-## linsong@linsongdeMacBook-Air NGNode % docker build . -t songlin81/node-fruit-app
-## insong@linsongdeMacBook-Air NGNode % docker images
-  REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+- linsong@linsongdeMacBook-Air NGNode % docker build . -t songlin81/node-fruit-app
+- insong@linsongdeMacBook-Air NGNode % docker images
+    * REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
   songlin81/node-fruit-app   latest    77583c891812   12 seconds ago   912MB
   songlin81/angular12        latest    313e7843926b   3 days ago       56.4MB
 ## linsong@linsongdeMacBook-Air NGNode % docker run --name fruit-node -p 4000:4000 -d -v /Users/linsong/Downloads/ngDocker/voldata/:/fruitdata songlin81/node-fruit-app
