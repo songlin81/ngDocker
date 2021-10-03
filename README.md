@@ -1,9 +1,9 @@
 # Angular Web application and NodeJS data service with Docker Compose
 ### .
 
-# 1. Build image
+### 1. Build image
 - linsong@linsongdeMacBook-Air NGStore % ng build --prod
-- create DockerFile in NGStore/Dockerfile
+ * Create DockerFile in NGStore/Dockerfile
 - linsong@linsongdeMacBook-Air NGStore % mv Dockerfile ./dist
 - linsong@linsongdeMacBook-Air NGStore % cd dist 
 - linsong@linsongdeMacBook-Air dist % docker build -t angular12 .
@@ -11,20 +11,20 @@
  * REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
  * angular12    latest    d4de5df03fdc   19 seconds ago   56.4MB
 
-# 2. Run container 
-## linsong@linsongdeMacBook-Air dist % docker run -d --name demo1 -p 8080:80 angular12
-  dd5709a8edb299a45557931bd2bef333aa24a3ec0339ce3131159291b0974c56
-## visit: 127.0.0.1:8080
+### 2. Run container 
+- linsong@linsongdeMacBook-Air dist % docker run -d --name demo1 -p 8080:80 angular12
+ * dd5709a8edb299a45557931bd2bef333aa24a3ec0339ce3131159291b0974c56
+- Visit: 127.0.0.1:8080
 
-# 3. Clean up
-## linsong@linsongdeMacBook-Air dist % docker stop dd5709a8edb29
+### 3. Clean up
+- linsong@linsongdeMacBook-Air dist % docker stop dd5709a8edb29
   dd5709a8edb29
-## linsong@linsongdeMacBook-Air dist % docker ps -a 
+- linsong@linsongdeMacBook-Air dist % docker ps -a 
   CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS                      PORTS     NAMES
   dd5709a8edb2   angular12   "nginx -g 'daemon of…"   2 minutes ago   Exited (0) 35 seconds ago             demo1
-## linsong@linsongdeMacBook-Air dist % docker rm dd5709a8edb2  
+- linsong@linsongdeMacBook-Air dist % docker rm dd5709a8edb2  
   dd5709a8edb2
-## linsong@linsongdeMacBook-Air dist % docker rmi d4de5df03fdc
+- linsong@linsongdeMacBook-Air dist % docker rmi d4de5df03fdc
   Untagged: angular12:latest
   Deleted: sha256:d4de5df03fdce6494820c02a38a467188ab226e932485e09efd614de1a0eb0ce
 
