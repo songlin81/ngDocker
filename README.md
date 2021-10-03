@@ -50,46 +50,46 @@
     * Digest: sha256:1460038c33bdcd83b203a1ae4372805ea46627e1c66d4ed6c1b2a588a83bc23e
     * Status: Downloaded newer image for songlin81/angular12:latest
     * docker.io/songlin81/angular12:latest
-## linsong@linsongdeMacBook-Air dist % docker images                         
+- linsong@linsongdeMacBook-Air dist % docker images                         
     * REPOSITORY            TAG       IMAGE ID       CREATED        SIZE
     * songlin81/angular12   latest    313e7843926b   32 hours ago   56.4MB
 
 ### 6. ngrok
 - linsong@linsongdeMacBook-Air Downloads % ./ngrok http 8080
 
-# 7. Package Node
-## linsong@linsongdeMacBook-Air NGNode % touch Dockerfile
-## linsong@linsongdeMacBook-Air NGNode % touch .dockerignore
-## linsong@linsongdeMacBook-Air NGNode % docker build . -t songlin81/node-fruit-app
-## linsong@linsongdeMacBook-Air NGNode % docker images                             
-  REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
-  songlin81/node-fruit-app   latest    c3fadf93c780   36 seconds ago   912MB
-## linsong@linsongdeMacBook-Air NGNode % docker run -p 4000:4000 -d songlin81/node-fruit-app
-  bf0220689cc83fdabd8e9a308b6ffbf0175f09f2a21eed92ab408318c9bbf518
-## linsong@linsongdeMacBook-Air NGNode % docker logs bf0220689cc8
-  Server started on port 4000
-## linsong@linsongdeMacBook-Air NGNode % docker exec -it bf0220689cc8 /bin/bash
-## root@bf0220689cc8:/usr/src/app# ls
-  Dockerfile  fruits.js  node_modules  package-lock.json  package.json  server.js
-## root@bf0220689cc8:/usr/src/app# exit
-  exit
-## linsong@linsongdeMacBook-Air NGNode % docker push songlin81/node-fruit-app:latest
+### 7. Package Node
+- linsong@linsongdeMacBook-Air NGNode % touch Dockerfile
+- linsong@linsongdeMacBook-Air NGNode % touch .dockerignore
+- linsong@linsongdeMacBook-Air NGNode % docker build . -t songlin81/node-fruit-app
+- linsong@linsongdeMacBook-Air NGNode % docker images                             
+    * REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+    * songlin81/node-fruit-app   latest    c3fadf93c780   36 seconds ago   912MB
+- linsong@linsongdeMacBook-Air NGNode % docker run -p 4000:4000 -d songlin81/node-fruit-app
+    * bf0220689cc83fdabd8e9a308b6ffbf0175f09f2a21eed92ab408318c9bbf518
+- linsong@linsongdeMacBook-Air NGNode % docker logs bf0220689cc8
+    * Server started on port 4000
+- linsong@linsongdeMacBook-Air NGNode % docker exec -it bf0220689cc8 /bin/bash
+- root@bf0220689cc8:/usr/src/app# ls
+    * Dockerfile  fruits.js  node_modules  package-lock.json  package.json  server.js
+- root@bf0220689cc8:/usr/src/app# exit
+    * exit
+- linsong@linsongdeMacBook-Air NGNode % docker push songlin81/node-fruit-app:latest
 
-# 8. Docker Volume
-## linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume create fruit-node 
-  fruit-node
-## linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
-  [
-      {
-          "CreatedAt": "2021-10-01T12:23:54Z",
-          "Driver": "local",
-          "Labels": {},
-          "Mountpoint": "c",
-          "Name": "fruit-node",
-          "Options": {},
-          "Scope": "local"
-      }
-  ]
+### 8. Docker Volume
+- linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume create fruit-node 
+    * fruit-node
+- linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
+    ```[
+        {
+            "CreatedAt": "2021-10-01T12:23:54Z",
+            "Driver": "local",
+            "Labels": {},
+            "Mountpoint": "c",
+            "Name": "fruit-node",
+            "Options": {},
+            "Scope": "local"
+        }
+    ]```
 ## linsong@linsongdeMacBook-Air ngrx_pocs-main % docker volume rm fruit-node 
   fruit-node
 ## linsong@linsongdeMacBook-Air ngrx_pocs-main % docker inspect fruit-node 
