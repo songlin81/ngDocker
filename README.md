@@ -97,7 +97,8 @@
   REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
   songlin81/node-fruit-app   latest    77583c891812   12 seconds ago   912MB
   songlin81/angular12        latest    313e7843926b   3 days ago       56.4MB
-## linsong@linsongdeMacBook-Air NGNode % docker run --name fruit-node -p 4000:4000 -d -v /Users/linsong/Downloads/ngrx_pocs-main/voldata/:/fruitdata songlin81/node-fruit-app
+## linsong@linsongdeMacBook-Air NGNode % docker run --name fruit-node -p 4000:4000 -d -v /Users/linsong/Downloads/NGD
+OCKER/voldata/:/fruitdata songlin81/node-fruit-app
   4053ed9e15aa229da7bc5d74e15e1e52b54b915248aed455edf43ec860d21457
 ## 
 
