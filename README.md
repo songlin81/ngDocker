@@ -3,13 +3,13 @@
 
 ### 1. Build image
 - linsong@linsongdeMacBook-Air NGStore % ng build --prod
- * Create DockerFile in NGStore/Dockerfile
+    Create DockerFile in NGStore/Dockerfile
 - linsong@linsongdeMacBook-Air NGStore % mv Dockerfile ./dist
 - linsong@linsongdeMacBook-Air NGStore % cd dist 
 - linsong@linsongdeMacBook-Air dist % docker build -t angular12 .
 - linsong@linsongdeMacBook-Air dist % docker images
- * REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
- * angular12    latest    d4de5df03fdc   19 seconds ago   56.4MB
+    REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+    angular12    latest    d4de5df03fdc   19 seconds ago   56.4MB
 
 ### 2. Run container 
 - linsong@linsongdeMacBook-Air dist % docker run -d --name demo1 -p 8080:80 angular12
